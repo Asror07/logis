@@ -26,13 +26,11 @@ const getRefreshToken = (): string | null => {
 const rawBaseQuery = fetchBaseQuery({
   // baseUrl: "https://api.logistic.kotib.ai/api/v1",
   baseUrl: import.meta.env.VITE_API_URL,
-  credentials: "include",
   prepareHeaders: (headers, { getState }) => {
     const token = (getState() as RootState).auth.accessToken;
     if (token) {
       headers.set("authorization", `Bearer ${token}`);
     }
-    console.log(import.meta.env.VITE_API_URL);
     return headers;
   },
 });
