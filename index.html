@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      // Prevent flash of wrong theme - runs before React loads
+      (function() {
+        const theme = localStorage.getItem('theme') || 'dark';
+        document.documentElement.classList.remove('light', 'dark');
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProStatus - AI-Powered Communication Platform | Super Dispatch</title>
+    <meta name="description" content="Proactive Status Update Agent - Revolutionize stakeholder communications with AI-powered automated updates for vehicle transport. Reduce manual tasks by 70%." />
+    <meta name="author" content="Super Dispatch" />
+    <meta name="keywords" content="vehicle transport, logistics, AI communication, status updates, fleet management" />
+    <meta name="theme-color" content="#fe4a49" />
+    <link rel="canonical" href="https://prostatus.superdispatch.com" />
+
+    <meta property="og:title" content="ProStatus - AI-Powered Communication Platform" />
+    <meta property="og:description" content="Automate status updates and reduce inbound calls by 80% with intelligent AI-powered communications." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@SuperDispatch" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
